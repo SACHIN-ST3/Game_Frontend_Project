@@ -14,6 +14,8 @@
 
 ```bash
 git clone https://github.com/SACHIN-ST3/Game_Frontend_Project.git
+```
+```
 cd Game_Frontend_Project
 ```
 
@@ -23,6 +25,8 @@ cd Game_Frontend_Project
 
 ```bash
 npm install
+```
+```
 npm run dev
 ```
 
