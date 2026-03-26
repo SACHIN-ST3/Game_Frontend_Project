@@ -12,7 +12,7 @@
 
 ### **1️⃣ Clone Repository**
 ```
-git clone https://github.com/your-username/game-frontend-project.git  
+git clone https://github.com/SACHIN-ST3/Game_Frontend_Project.git:
 ```
 ```
 cd game-frontend-project
