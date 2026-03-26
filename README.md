@@ -1,59 +1,76 @@
-# **🎮 Game Frontend Project (Dockerized)**
+# 🎮 Game Frontend Project (Dockerized)
 
-## **🚀 Tech Stack**
+## 🚀 Tech Stack
 
-* React (Vite)  
-* Docker  
+* React (Vite)
+* Docker
 * Nginx
 
 ---
 
-## **📦 Project Setup**
+## 📦 Project Setup
 
-### **1️⃣ Clone Repository**
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/SACHIN-ST3/Game_Frontend_Project.git
+cd Game_Frontend_Project
 ```
-git clone https://github.com/SACHIN-ST3/Game_Frontend_Project.git:
-```
-```
-cd game-frontend-project
-```
+
 ---
 
-### **2️⃣ Run Without Docker**
-```
+### 2️⃣ Run Without Docker (Development Mode)
+
+```bash
 npm install
-```
-```
 npm run dev
 ```
-App runs on: [http://localhost:5173](http://localhost:5173/)
+
+👉 App runs on: http://localhost:5173
 
 ---
 
-### **3️⃣ Run With Docker 🐳**
+### 3️⃣ Run With Docker 🐳 (Production Mode)
 
-#### **Build Image**
-```
+#### Build Image
+
+```bash
 docker build -t game-frontend .
 ```
-#### **Run Container**
-```
+
+#### Run Container
+
+```bash
 docker run -d -p 8080:80 game-frontend
 ```
-App runs on: [http://localhost:8080](http://localhost:8080/)
+
+👉 App runs on: http://localhost:8080
 
 ---
 
-## **🧠 Concept**
+## 🧠 Concept
 
 This project uses a **multi-stage Docker build**:
 
-* Node.js → Build React app  
-* Nginx → Serve static files
+* Node.js → Build the React application
+* Nginx → Serve static files efficiently
 
 ---
 
-## **📌 Author**
+## 📁 Project Structure
+
+```
+├── src/
+├── public/
+├── Dockerfile
+├── package.json
+├── vite.config.js
+```
+
+---
+
+## 📌 Author
 
 Sachin Rawat
 
+---
