@@ -11,17 +11,21 @@
 ## **📦 Project Setup**
 
 ### **1️⃣ Clone Repository**
-
+```
 git clone https://github.com/your-username/game-frontend-project.git  
+```
+```
 cd game-frontend-project
-
+```
 ---
 
 ### **2️⃣ Run Without Docker**
-
-npm install  
+```
+npm install
+```
+```
 npm run dev
-
+```
 App runs on: [http://localhost:5173](http://localhost:5173/)
 
 ---
@@ -29,13 +33,13 @@ App runs on: [http://localhost:5173](http://localhost:5173/)
 ### **3️⃣ Run With Docker 🐳**
 
 #### **Build Image**
-
+```
 docker build -t game-frontend .
-
+```
 #### **Run Container**
-
+```
 docker run -d -p 8080:80 game-frontend
-
+```
 App runs on: [http://localhost:8080](http://localhost:8080/)
 
 ---
