@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        SERVER = "18.209.50.67"
+        SERVER = "ubuntu@18.209.50.67"
         TARGET = "/var/www/html"
     }
 
