@@ -1,4 +1,5 @@
 pipeline {
+
     agent any
 
     environment {
@@ -6,9 +7,22 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'npm run build'
             }
         }
 
@@ -17,8 +31,8 @@ pipeline {
                 sshagent(credentials: ['nginx-ssh']) {
                     sh '''
                     rsync -avz --delete \
-                      -e "ssh -o StrictHostKeyChecking=no" \
-                      ./ $SERVER:/tmp/website/
+                    -e "ssh -o StrictHostKeyChecking=no" \
+                    dist/ $SERVER:/tmp/website/
 
                     ssh -o StrictHostKeyChecking=no $SERVER "
                         sudo rm -rf /var/www/html/*
@@ -28,5 +42,6 @@ pipeline {
                 }
             }
         }
+
     }
 }
